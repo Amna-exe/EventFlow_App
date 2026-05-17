@@ -1,0 +1,330 @@
+You are a senior Flutter/Dart software architect and code auditor.
+
+Your task is to VERIFY that the analytics system implementation for the project Event Flow has been fully and correctly implemented.
+
+IMPORTANT:
+
+DO NOT run the project.
+DO NOT install dependencies.
+DO NOT execute code.
+ONLY statically inspect the codebase, architecture, models, services, UI structure, and implementation details.
+Validate implementation quality, architectural consistency, scalability, and correctness.
+
+Your job is to perform a COMPLETE implementation audit.
+
+AUDIT GOALS
+
+Verify that the analytics system:
+
+is fully implemented
+follows the requested architecture
+integrates cleanly into the existing project
+preserves the existing UI/UX theme
+maintains RBAC/security boundaries
+avoids unnecessary complexity
+avoids duplicated logic/calculations
+remains scalable and maintainable
+follows Flutter/Dart best practices
+PROJECT CONTEXT
+
+Event Flow is a multi-role event + venue management system with:
+
+Organisers
+Venue Owners
+Attendees
+Super Admins
+
+Architecture:
+
+Flutter
+Dart
+singleton services
+in-memory object storage
+Material widgets only
+role-based dashboards
+
+Analytics must feel native to the existing project and match the current dashboard design language.
+
+VERIFICATION REQUIREMENTS
+1. Analytics Infrastructure Audit
+
+Verify:
+
+AnalyticsService exists
+analytics logic is centralized
+reusable calculators/helpers exist
+DTO/view models are properly separated
+memoization/caching is implemented correctly
+repeated calculations are avoided
+architecture supports future backend/database migration
+
+Check for:
+
+duplicated analytics logic
+business logic inside widgets
+tight coupling
+poor separation of concerns
+oversized files/classes
+2. Event Tracking System Audit
+
+Verify implementation of:
+
+analytics event model
+event tracking pipeline
+metadata handling
+timestamp tracking
+tracking integration into workflows
+
+Confirm tracking exists for:
+
+event_created
+booking_requested
+booking_approved
+registration_completed
+attendance_marked
+venue_viewed
+search_performed
+payment_completed
+notification_opened
+
+Check:
+
+consistency
+naming conventions
+extensibility
+unnecessary complexity
+3. Organiser Analytics Audit
+
+Verify implementation of:
+
+registration funnel
+attendance rate
+no-show rate
+fill rate
+registration velocity
+peak registration times
+repeat attendees
+category analytics
+venue efficiency
+cancellation analytics
+conflict impact analytics
+revenue estimation
+trend analytics
+
+Verify:
+
+formulas/calculations are correct
+charts/widgets are reusable
+UI integration is consistent
+analytics are scoped to the organizer only
+4. Venue Owner Analytics Audit
+
+Verify:
+
+room utilization
+occupancy analytics
+booking approval rates
+cancellation metrics
+venue popularity
+revenue analytics
+payment trends
+organizer trends
+underutilized room detection
+recommendation/intelligence logic
+
+Check:
+
+aggregation correctness
+efficient calculations
+UI consistency
+5. Attendee Analytics Audit
+
+Verify:
+
+attendance streaks
+favorite categories
+activity trends
+diversity scoring
+engagement analytics
+schedule density
+personalized insights
+
+Ensure:
+
+attendee privacy is preserved
+analytics are user-specific
+retention-focused insights are meaningful
+6. Super Admin Analytics Audit
+
+Verify implementation of:
+
+active user metrics
+growth analytics
+role distribution
+booking conversion
+revenue trends
+top organizers
+top venues
+utilization metrics
+operational bottlenecks
+churn/risk indicators
+
+Check:
+
+admin-only access
+aggregation correctness
+scalability of calculations
+UI/UX AUDIT
+
+Verify analytics UI:
+
+matches the existing Event Flow theme
+uses Material widgets consistently
+preserves spacing/typography/layout patterns
+avoids dashboard clutter
+avoids flashy BI-style visuals
+feels native to the app
+
+Verify reusable widgets exist for:
+
+KPI cards
+chart containers
+analytics sections
+ranking tables
+trend indicators
+comparison cards
+
+Check:
+
+consistency
+responsiveness
+component reuse
+visual hierarchy
+PERFORMANCE AUDIT
+
+Verify:
+
+caching/memoization exists where appropriate
+expensive aggregations are minimized
+incremental recomputation is used
+analytics calculations are reusable/shared
+implementation is scalable
+
+Identify:
+
+bottlenecks
+unnecessary loops
+repeated filtering
+expensive widget rebuilds
+memory inefficiencies
+SECURITY + RBAC AUDIT
+
+Verify:
+
+organizer analytics are isolated
+attendee data is protected
+venue owners cannot access unrelated analytics
+super admin analytics are properly restricted
+no cross-role data leakage exists
+
+Check:
+
+role guards
+service-level protection
+query filtering
+analytics visibility rules
+CODE QUALITY AUDIT
+
+Review:
+
+naming conventions
+folder structure
+file organization
+separation of concerns
+maintainability
+scalability
+readability
+architectural consistency
+
+Identify:
+
+anti-patterns
+overengineering
+missing abstractions
+weak modularity
+code smells
+REQUIRED OUTPUT FORMAT
+
+Provide:
+
+1. Overall Audit Summary
+implementation quality score
+architecture quality score
+scalability score
+UI consistency score
+maintainability score
+2. What Was Implemented Correctly
+
+List all well-implemented areas.
+
+3. Missing Features
+
+List anything missing from the requested analytics system.
+
+4. Incorrect Implementations
+
+Identify:
+
+wrong formulas
+weak architecture decisions
+duplicated logic
+RBAC issues
+performance problems
+inconsistent UI patterns
+5. File-Level Review
+
+Mention:
+
+files implemented well
+files needing refactor
+oversized/problematic files
+misplaced logic
+6. Architecture Review
+
+Evaluate:
+
+analytics structure
+service layering
+DTO usage
+caching strategy
+extensibility
+7. UI/UX Review
+
+Evaluate:
+
+dashboard consistency
+widget reuse
+analytics readability
+design alignment with Event Flow
+8. Performance Review
+
+Identify:
+
+bottlenecks
+unnecessary recomputation
+optimization opportunities
+9. Security/RBAC Review
+
+Verify all role boundaries and privacy protections.
+
+10. Final Recommendations
+
+Provide:
+
+exact improvements needed
+refactor priorities
+scalability improvements
+cleanup recommendations
+production-readiness assessment
+
+Be extremely thorough, implementation-focused, and architecture-focused.

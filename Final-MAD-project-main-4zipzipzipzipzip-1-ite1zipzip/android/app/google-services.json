@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "517180076163",
+    "project_id": "finalmad-d8a9f",
+    "storage_bucket": "finalmad-d8a9f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:517180076163:android:eafae69605adf5c0e66bb6",
+        "android_client_info": {
+          "package_name": "com.example.cllaude"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-kIKggQwUk6aIXnjm88NNeQtpn3G3lsI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

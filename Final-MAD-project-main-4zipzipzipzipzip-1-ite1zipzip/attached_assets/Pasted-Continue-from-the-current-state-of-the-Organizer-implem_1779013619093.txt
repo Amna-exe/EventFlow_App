@@ -1,0 +1,85 @@
+Continue from the current state of the Organizer implementation.
+
+IMPORTANT: RECOVERY MODE — STABILIZATION ONLY
+
+The previous edit left event_creation_sheet.dart in a partially modified state.
+
+Your ONLY goal in this run is to restore a clean, fully working, compile-safe version of the file.
+
+==================================================
+HARD CONSTRAINTS
+==================================================
+
+- Do NOT add new features.
+- Do NOT expand AI suggestions.
+- Do NOT redesign UI.
+- Do NOT refactor architecture.
+- Do NOT inspect unrelated files.
+- Do NOT explore logs, environment, SDK, or build systems.
+- Do NOT perform multi-step investigative debugging.
+- Do NOT leave partial implementations.
+
+This is a stabilization pass ONLY.
+
+==================================================
+SCOPE
+==================================================
+
+File allowed:
+- event_creation_sheet.dart ONLY
+
+==================================================
+TASK
+==================================================
+
+1. Fix incomplete / broken edits from previous attempt
+2. Ensure all modified logic is COMPLETE and CONSISTENT:
+   - conflict detection must be fully functional OR reverted to last stable working version
+   - UI must render without layout breaks
+   - no half-implemented hooks or unused variables
+   - no dangling methods or partial refactors
+
+3. Ensure the file is:
+   - fully compiling
+   - logically consistent
+   - production-safe
+
+==================================================
+CONFLICT POLICY (IMPORTANT)
+==================================================
+
+If current conflict/AI/sticky UI changes are partially implemented or inconsistent:
+
+→ REVERT THEM CLEANLY to last known stable logic inside this file
+→ Prefer correctness over feature completeness
+
+Do NOT attempt to re-implement them in this run.
+
+==================================================
+UI SAFETY RULES
+==================================================
+
+- Keep existing layout structure stable
+- Ensure publish/save buttons are visible and correctly placed (either valid sticky footer OR original working placement — but NOT broken/partial)
+- Ensure no overlay/banner is broken or hidden behind dialog
+
+==================================================
+EXECUTION RULES
+==================================================
+
+- Single pass only
+- One file inspection only
+- One final build check only
+- No iterative “let me check…” reasoning loops
+- No staged edits
+
+==================================================
+OUTPUT FORMAT
+==================================================
+
+Return ONLY:
+
+1. Final file state fixed
+2. What was reverted or corrected
+3. Confirmation that file is stable and compiling
+4. Stop

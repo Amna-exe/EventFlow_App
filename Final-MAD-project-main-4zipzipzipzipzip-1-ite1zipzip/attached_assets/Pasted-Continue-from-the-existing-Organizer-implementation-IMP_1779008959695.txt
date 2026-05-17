@@ -1,0 +1,146 @@
+Continue from the existing Organizer implementation.
+
+IMPORTANT: Credit-optimized mode.
+
+Scope:
+Organizer analytics dashboard + event creation + venue selection only.
+
+Hard constraints:
+- Do NOT scan unrelated files.
+- Do NOT modify attendee or venue-owner modules.
+- Do NOT modify architecture, dependencies, workflows, Flutter SDK, Nix, Firebase, or build configs.
+- Preserve existing theme/UI/components.
+- No refactors.
+- No extra features outside this task.
+
+Execution limits:
+- Max 3 file inspections.
+- Max 5 file edits.
+- Max 1 build/test.
+- Stop immediately after task completion.
+
+==================================================
+TASK 1 — Fix Analytics Charts
+==================================================
+
+The charts currently render, but the data/insights do not make business sense.
+
+Fix all analytics logic so charts use meaningful organizer metrics.
+
+Replace placeholder/random/demo data with real derived analytics.
+
+Charts should include:
+
+1. Ticket Sales Trend
+- x-axis = dates
+- y-axis = tickets sold
+- show real booking progression
+
+2. Revenue Trend
+- revenue per event/day/week
+
+3. Venue Occupancy
+- occupancy % by event/venue
+
+4. Ticket Type Distribution
+- VIP
+- Standard
+- Student
+- Early Bird
+
+5. Booking Time Analysis
+- peak booking hours/days
+
+Requirements:
+- Data labels make sense
+- Axis labels readable
+- Tooltips meaningful
+- Empty states if no data
+- No fake/random values
+
+==================================================
+TASK 2 — Fix Dashboard Refresh
+==================================================
+
+The refresh button currently does not work.
+
+Fix:
+- refresh fetches latest analytics
+- all cards/charts update correctly
+- loading indicator shown
+- prevent duplicate refresh calls
+- preserve current scroll position
+- handle errors gracefully
+
+==================================================
+TASK 3 — Fix Event Overlap Notification
+==================================================
+
+Current overlap/collision warning is rendered behind the Add Event dialog.
+
+Fix:
+- warning must appear above the dialog
+- never behind modal/sheet
+- fully readable
+- updates live when:
+  • date changes
+  • time changes
+  • venue changes
+
+Use current design system:
+- overlay/banner/dialog/snackbar
+
+==================================================
+TASK 4 — AI Smart Scheduling Suggestions
+==================================================
+
+Add AI scheduling assistance during event creation.
+
+When organizer selects date/time/venue:
+
+Show "Smart Suggestions" panel.
+
+A. Available Date Suggestions
+Suggest:
+- nearest free dates
+- least conflicting dates
+- highest predicted attendance dates
+- low competition dates
+
+Examples:
+"Friday 7 PM has 32% higher attendance probability."
+"Tuesday venue conflict risk is low."
+
+B. Venue Recommendations
+Suggest best venues based on:
+- expected guest count
+- event type
+- historical occupancy
+- budget
+- date availability
+
+Show:
+- venue name
+- capacity
+- suitability score
+- occupancy forecast
+- recommendation reason
+
+Examples:
+"Main Hall is 94% match for this event."
+"Conference Room B has lower conflict probability."
+
+C. Prediction Metrics
+Show:
+- predicted attendance
+- likely occupancy %
+- confidence score
+- potential overbooking risk
+
+==================================================
+Output Only:
+1. Files changed
+2. Issues fixed
+3. AI scheduling features added
+4. Any blockers
+5. Stop

@@ -1,0 +1,127 @@
+You are a senior Flutter/Dart architect and UI/UX engineer.
+
+Your task is to redesign the global theme of the Event Flow app and enhance existing features UI/UX.
+
+Do NOT run the app. Do NOT change core architecture. Do NOT introduce new frameworks. Keep everything within existing Flutter Material structure and singleton-based architecture.
+
+1. GLOBAL THEME CHANGE (REQUIRED)
+
+Replace the entire app theme with a Warm Minimal SaaS aesthetic.
+
+Design direction
+professional
+warm
+soft
+slightly quirky (subtle personality, not playful)
+clean enterprise dashboard feel
+consistent across all roles (Organizer, Venue Owner, Attendee, Admin)
+Color system (apply globally)
+Backgrounds
+App background: #FAF7F2
+Card background: #FFFFFF
+Border: #E9E1D6
+Text
+Primary: #1F1A17
+Secondary: #6E6258
+Muted: #A09489
+Accent (primary brand)
+Primary: #C46A3D (warm clay)
+Soft accent: #E8C6B0
+Accent background: #FFF1E8
+Status
+Success: #3D7A5A
+Warning: #B7791F
+Error: #C24A3A
+Info: #5A6F8C
+Typography & feel
+clean system font (no decorative fonts)
+slightly increased line height for readability
+stronger hierarchy between headings and body
+UI style rules
+no gradients
+no neon colors
+no heavy shadows
+soft elevation only
+rounded corners (moderate, consistent radius)
+spacing must feel airy and structured
+Icon system (IMPORTANT)
+
+Replace any emoji usage with Material Icons only:
+
+use Icons.event, Icons.analytics, Icons.apartment, Icons.person, Icons.calendar_month, etc.
+icons must be consistent and minimal
+no emoji anywhere in UI
+2. FEATURE UX ENHANCEMENT (IMPORTANT)
+
+Improve existing features across all roles WITHOUT changing core logic.
+
+You must enhance UI clarity and professionalism by:
+
+A. Organiser Module
+improve dashboard structure into clear “Insight blocks”
+convert stats into grouped KPI cards
+add subtle trend indicators (↑ ↓ neutral dots using icons only)
+improve analytics readability with cleaner sections
+better visual hierarchy for events, attendees, venues
+B. Venue Owner Module
+make booking flow more “decision-based”
+enhance pending booking cards with structured info layout
+improve revenue + occupancy visualization (simple, clean)
+highlight urgency using subtle accent borders (not colors everywhere)
+make schedules easier to scan (timeline cards instead of dense lists)
+C. Attendee Module
+improve event discovery UI into cleaner “browse cards”
+make calendar view more readable and less cluttered
+simplify analytics into insight summaries
+improve spacing and card grouping
+D. Admin Module
+convert dashboard into structured operational overview
+group metrics into sections:
+Users
+Events
+Bookings
+System health
+avoid dense data dumps
+3. QUIRKY BUT PROFESSIONAL TOUCH (IMPORTANT)
+
+Add subtle personality without breaking professionalism:
+
+slightly playful micro-interactions (hover states, card lift)
+friendly microcopy (no emojis, no slang)
+icon-led storytelling (icons + labels instead of heavy text blocks)
+soft “insight tags” like:
+“Peak activity”
+“High demand”
+“Low utilization”
+“Stable trend”
+
+But keep tone professional.
+
+4. IMPLEMENTATION REQUIREMENTS
+
+You must:
+
+update global ThemeData
+refactor reusable UI components (cards, KPI widgets, headers)
+replace any emoji usage with icons
+ensure consistency across all dashboards
+keep singleton architecture unchanged
+avoid overengineering
+keep code modular and readable
+5. CODE RULES
+no new frameworks
+no external UI libraries
+reuse existing services/models
+keep logic separate from UI
+small reusable widgets preferred
+avoid duplication
+6. OUTPUT FORMAT
+
+A. Theme System Changes
+B. UI/UX Enhancement Plan (per module)
+C. Component Updates (reusable widgets)
+D. Code Changes (files + snippets)
+E. Final UI Behavior Summary
+
+GOAL:
+Transform Event Flow into a warm, modern, slightly quirky but professional SaaS-grade platform, while improving clarity, usability, and visual consistency across all roles.

@@ -1,0 +1,242 @@
+You are a senior Flutter/Dart architect and lead engineer.
+
+Your task is to IMPLEMENT the analytics system for the existing project **Event Flow**.
+
+IMPORTANT:
+
+* DO NOT redesign the whole project.
+* DO NOT replace the current singleton-service architecture.
+* DO NOT introduce unnecessary frameworks.
+* DO NOT break existing role-based flows.
+DO NOT run this app, just go through the code and edit it
+* Reuse the current architecture, models, services, and UI patterns.
+* Follow the existing Material design system.
+* Keep the theme, layout style, spacing, typography, and visual identity CONSISTENT with the current app.
+* All analytics UI must feel native to the existing project, not like a separate admin template or third-party dashboard.
+
+You must work incrementally and cleanly inside the current codebase.
+
+ PROJECT CONTEXT
+
+Event Flow is a multi-role event + venue management system with:
+
+* Organisers
+* Venue Owners
+* Attendees
+* Super Admins
+
+ YOUR GOAL
+
+Implement a COMPLETE analytics system integrated into the current architecture.
+
+You must:
+
+1. Analyze the existing codebase structure.
+2. Reuse current services/models wherever possible.
+3. Add analytics incrementally.
+4. Keep code modular and scalable.
+5. Avoid duplicated calculations.
+6. Create reusable analytics utilities/components.
+7. Maintain RBAC boundaries.
+8. Ensure analytics visuals match the current Event Flow design system.
+
+IMPLEMENTATION REQUIREMENTS
+
+1. Create Analytics Infrastructure
+
+Implement:
+
+* AnalyticsService
+* metric calculators
+* aggregation helpers
+* reusable DTO/view models
+* analytics utility classes
+* caching/memoization where useful
+
+The service should:
+
+* aggregate data from existing singleton services
+* expose role-specific analytics methods
+* avoid repeated recalculations
+* support future database migration
+
+ 2. Add Event Tracking System
+
+Implement analytics events such as:
+
+* event_created
+* booking_requested
+* booking_approved
+* registration_completed
+* attendance_marked
+* venue_viewed
+* search_performed
+* payment_completed
+* notification_opened
+
+Create:
+
+* analytics event model
+* metadata structure
+* timestamp handling
+* tracking methods
+
+Track events through existing workflows without breaking logic.
+
+ 3. Organiser Analytics
+
+Implement:
+
+* registration funnel
+* attendance rate
+* no-show rate
+* fill rate
+* registration velocity
+* peak registration times
+* repeat attendees
+* category performance
+* venue efficiency
+* cancellation analytics
+* conflict impact analytics
+* revenue estimation
+* trend analytics
+
+Add:
+
+* KPI cards
+* charts
+* ranking tables
+* progress indicators
+* timeline/heatmap style widgets where appropriate
+
+4. Venue Owner Analytics
+
+Implement:
+
+* room utilization
+* occupancy rate
+* revenue by room/building
+* booking approval rate
+* cancellation rate
+* peak demand periods
+* venue popularity
+* underutilized rooms
+* organizer activity metrics
+* payment tracking trends
+
+Include intelligent insights/recommendations.
+
+5. Attendee Analytics
+
+Implement:
+
+* attendance streaks
+* favorite categories
+* monthly activity
+* event diversity score
+* engagement trends
+* schedule density
+* personalized insights
+
+Focus on engagement and retention.
+
+6. Super Admin Analytics
+
+Implement platform-wide analytics:
+
+* active users
+* growth trends
+* role distribution
+* booking conversion
+* revenue trends
+* top organizers
+* top venues
+* system utilization
+* operational bottlenecks
+* churn/risk indicators
+
+Design this like a SaaS operations dashboard while still matching Event Flow’s existing clean minimal UI.
+
+ UI REQUIREMENTS
+
+Use:
+
+* Flutter Material only
+* existing design palette/styles
+* reusable analytics widgets
+
+Create reusable:
+
+* KPI cards
+* chart containers
+* analytics sections
+* comparison cards
+* trend indicators
+* ranking list widgets
+
+Keep visuals:
+* professional
+* consistent with existing dashboards
+
+Avoid:
+
+* colorful BI-style dashboards
+* neon charts
+* excessive gradients
+* cluttered admin-panel aesthetics
+
+Analytics should feel like a natural extension of the current Event Flow UI.
+
+CODE REQUIREMENTS
+
+You must:
+
+* follow existing naming conventions
+* preserve architecture consistency
+* avoid massive files
+* separate logic from UI
+* create reusable calculators/helpers
+* keep analytics computation centralized
+
+Provide:
+
+* exact files to create
+* exact files to modify
+* code snippets where needed
+* architectural reasoning
+* integration steps
+
+PERFORMANCE REQUIREMENTS
+
+Implement:
+
+* memoization/caching
+* incremental recomputation
+* shared aggregations
+* lightweight calculations
+
+Design analytics so they can later migrate to a real database/backend without major rewrites.
+
+SECURITY REQUIREMENTS
+
+Ensure:
+
+* role-based analytics isolation
+* no cross-role data leakage
+* organizer-only access to own analytics
+* attendee privacy protection
+* admin-only global analytics
+
+# OUTPUT FORMAT
+
+For every implementation step provide:
+
+1. Purpose
+2. Files to create/modify
+3. Exact implementation approach
+4. Key cl
+asses/methods
+Integration points
+UI integration notes
+Scalability considerations
+Focus on production-quality architecture and implementation details.

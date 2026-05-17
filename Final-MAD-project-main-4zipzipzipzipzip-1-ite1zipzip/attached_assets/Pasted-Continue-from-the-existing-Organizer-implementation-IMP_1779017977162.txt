@@ -1,0 +1,109 @@
+Continue from the existing Organizer implementation.
+
+IMPORTANT: Credit-optimized mode.
+
+Scope:
+Organizer event creation + analytics insights only.
+
+Hard constraints:
+- Do NOT modify attendee or venue-owner modules.
+- Do NOT modify architecture, dependencies, workflows, Flutter SDK, Nix, Firebase, or build configs.
+- Preserve existing theme/UI/components.
+- No refactors.
+- No unrelated feature additions.
+- Do NOT add other APIs besides Weather.
+
+Execution limits:
+- Max 2 file inspections.
+- Max 4 file edits.
+- Max 1 build/test.
+- Stop immediately after task completion.
+
+==================================================
+TASK — Integrate Weather API (OpenWeather)
+==================================================
+
+Add weather intelligence to Event Creation flow.
+
+Use OpenWeather API to fetch forecast based on:
+- event date
+- event venue location (city or coordinates if available)
+
+==================================================
+FEATURE 1 — Weather Forecast for Event Date
+==================================================
+
+When organizer selects:
+- venue
+- date
+
+Fetch and display:
+- temperature
+- weather condition (sunny / cloudy / rain / storm)
+- precipitation probability
+
+Show a compact "Weather Insight Card" inside event creation UI.
+
+==================================================
+FEATURE 2 — Indoor / Outdoor Recommendation
+==================================================
+
+Based on forecast:
+
+If rain probability > threshold:
+→ Recommend INDOOR event
+
+If clear weather:
+→ Suggest OUTDOOR suitable
+
+Show message like:
+- "Recommended: Indoor setup due to 70% rain probability"
+- "Outdoor conditions are favorable"
+
+==================================================
+FEATURE 3 — Risk Warning System
+==================================================
+
+Show warning banner when needed:
+
+- High rain risk (>60%)
+- Storm risk
+- Extreme temperature
+
+Example:
+⚠ "Weather Risk: Outdoor event has 70% rain probability"
+
+Must be:
+- visible above form section
+- non-blocking but prominent
+- updates dynamically when date/venue changes
+
+==================================================
+FEATURE 4 — AI-style Insight Text
+==================================================
+
+Generate simple insights:
+
+- "Low attendance risk due to weather"
+- "Weather may affect outdoor seating"
+- "Peak comfort conditions expected"
+
+(No real AI model required — rule-based logic is fine)
+
+==================================================
+UX REQUIREMENTS
+==================================================
+
+- Do not break existing event creation flow
+- Keep UI consistent with app theme
+- Use loading state while fetching weather
+- Cache last fetched result per venue/date
+- Handle no-internet gracefully
+
+==================================================
+OUTPUT ONLY:
+1. Files changed
+2. Weather integration completed
+3. UI/UX additions
+4. Any blockers
+5. Stop

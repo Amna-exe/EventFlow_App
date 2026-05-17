@@ -1,0 +1,127 @@
+Continue from the existing Organizer implementation.
+
+IMPORTANT: Credit-optimized mode. Do NOT do exploratory debugging or multi-step environment investigation.
+
+Scope:
+Organizer event creation only.
+
+Target file:
+- event_creation_sheet.dart
+
+Hard constraints:
+- Do NOT inspect unrelated files.
+- Do NOT inspect build workflows, Flutter SDK, Nix, ports, Firebase, dependencies, logs, caches, or infrastructure.
+- Do NOT restart the app multiple times.
+- Do NOT run diagnostic chains like "let me check logs / let me inspect / let me rebuild / let me verify."
+- Preserve existing theme/UI/components.
+- No refactors outside this file.
+
+Execution limits:
+- Max 1 file inspection.
+- Max 1 implementation pass.
+- Max 1 build/test.
+- Stop immediately.
+
+==================================================
+TASK — Fix Event Creation UX + Conflict Logic
+==================================================
+
+Fix all issues directly in:
+
+event_creation_sheet.dart
+
+Issue 1 — Conflict Detection Logic
+
+Current problem:
+Conflict detection checks general event overlaps and creates false warnings.
+
+Fix:
+A conflict should ONLY be triggered when BOTH are true:
+
+1. Same venue/room is selected.
+2. The selected room has an overlapping booking.
+
+Requirements:
+- Use actual room bookings (allBookings).
+- Do NOT use general event list.
+- If no venue is selected:
+  • no conflict warning shown.
+- Date suggestions must respect venue availability.
+
+==================================================
+Issue 2 — Conflict Warning Visibility
+==================================================
+
+Current problem:
+The warning is behind the Add Event dialog or affects layout.
+
+Fix:
+Replace current implementation with a sticky inline warning.
+
+Requirements:
+- Always visible.
+- Positioned directly below title/header.
+- Does not push layout unexpectedly.
+- Updates live when:
+  • venue changes
+  • date changes
+  • time changes
+
+==================================================
+Issue 3 — Publish Button Visibility
+==================================================
+
+Current problem:
+Save Draft / Publish buttons are buried inside scrollable content.
+
+Fix:
+Move action buttons to sticky footer.
+
+Requirements:
+- Always visible.
+- Pinned at bottom of sheet.
+- Scrollable form remains independent.
+
+Buttons:
+- Save as Draft
+- Publish
+
+==================================================
+Issue 4 — AI Scheduling Suggestions
+==================================================
+
+Fix smart scheduling panel.
+
+Requirements:
+
+A. Free Date Suggestions
+When venue selected:
+- suggest only dates where that venue is actually available.
+
+B. Conflict-Aware Suggestions
+Show:
+- nearest available dates
+- lowest conflict dates
+- highest attendance probability
+
+C. Venue Suggestions
+Show:
+- recommended venue
+- occupancy fit
+- conflict probability
+- suitability score
+
+==================================================
+Allowed Actions Only
+==================================================
+
+1. Read event_creation_sheet.dart
+2. Implement all fixes in one pass
+3. Run one build
+4. Stop
+
+Output Only:
+1. File changed
+2. Fixes completed
+3. Any blockers
+4. Stop

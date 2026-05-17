@@ -1,0 +1,309 @@
+Project Context:
+This is a mobile Event Management application with 3 user roles:
+
+1. Attendee
+- Browse events
+- Book tickets
+- View QR tickets
+- Join waitlists
+- Receive notifications
+- Check in to events
+- Rate/review events
+
+2. Organizer
+- Create and manage events
+- Manage venues
+- Manage ticketing
+- Manage staff
+- View analytics
+- Monitor bookings
+- Handle operations
+
+3. Venue Owner
+- Register venues
+- Manage venue availability
+- Manage pricing
+- Seat layouts
+- Capacity updates
+- Booking approvals
+
+IMPORTANT:
+I am ONLY working on the Organizer module.
+
+Hard Constraints:
+- Scope = Organizer module only.
+- Do NOT modify attendee or venue-owner modules.
+- Do NOT change app architecture.
+- Do NOT modify auth, routing, firebase setup, pubspec, dependencies, workflows, Flutter SDK, Nix, CI/CD, build scripts, or unrelated files.
+- Preserve existing theme, typography, colors, spacing, animations, navigation, and component styling.
+- No refactors.
+- No "cleanup improvements."
+- No exploratory environment debugging unless a reproducible compile error directly blocks this task.
+- If blocked:
+  1. Show blocking error.
+  2. Explain why code changes alone cannot solve it.
+  3. Perform minimum fix only.
+  4. Return immediately to organizer task.
+
+Execution Rules:
+1. Inspect organizer-related files only.
+2. Continue from current implementation.
+3. Make targeted changes only.
+4. Run one verification build.
+5. Stop after task completion.
+
+==================================================
+TASK 1 — Fix & Enhance Organizer Analytics Dashboard
+==================================================
+
+Fix the current organizer analytics section completely.
+
+Current issues to fix:
+- Broken metrics
+- Empty cards
+- Misaligned widgets
+- Overflow issues
+- Poor responsiveness
+- Static/non-updating analytics
+- Weak visual hierarchy
+
+Enhance the dashboard to look premium and visually engaging while keeping the existing app theme.
+
+Add:
+
+A. Overview Stats Cards
+Show:
+- Total Events
+- Upcoming Events
+- Active Venues
+- Tickets Sold
+- Revenue
+- Staff Assigned
+- Sponsors Count
+- Occupancy Rate
+
+B. Venue Occupancy Visualization
+Add a theatre/movie booking style seat visualization.
+
+Requirements:
+- Organizer selects a venue from dropdown.
+- Below dropdown show venue seating map.
+- Filled seats = booked.
+- Empty seats = available.
+- Reserved seats = pending.
+- Disabled seats = blocked.
+
+Show:
+- occupancy %
+- booked seats
+- remaining seats
+- capacity
+
+Update live when venue changes.
+
+C. Smart Charts
+Add analytics such as:
+- Ticket sales over time
+- Revenue trends
+- Event attendance trends
+- Popular ticket type distribution
+- Peak booking times
+- Venue utilization
+- Cancellation/refund trends
+
+D. AI Insights Panel
+Add intelligent insights such as:
+- "VIP tickets sell fastest on weekends"
+- "Student tickets underperform for weekday events"
+- "Venue occupancy likely to exceed 90%"
+- "Expected no-show rate: X%"
+
+E. Upcoming Events Panel
+Show:
+- Banner thumbnail
+- Date/time
+- Venue
+- Occupancy
+- Ticket sales progress
+
+F. Recent Activity Feed
+Show:
+- New bookings
+- Refunds
+- Staff assignments
+- Venue changes
+- Event updates
+
+G. Quick Actions
+Add:
+- Create Event
+- Manage Staff
+- Manage Tickets
+- View Venues
+- Export Analytics
+
+==================================================
+TASK 2 — Team & Staff Management
+==================================================
+
+Create organizer staff management.
+
+Staff categories:
+- Event Managers
+- Photographers
+- Decorators
+- Security
+- Volunteers
+
+Features:
+A. Staff Assignment
+- Assign staff to events
+- Assign multiple staff members
+- Role-based assignment
+
+B. Shift Scheduling
+- Create shifts
+- Start/end times
+- Conflict detection
+- Shift overlap warnings
+
+C. Attendance Tracking
+- Check-in/check-out
+- Attendance history
+- Late arrivals
+
+D. Task Tracking
+- Assign tasks
+- Task deadlines
+- Task completion status
+- Progress tracking
+
+Dashboard metrics:
+- Staff on duty
+- Missing staff
+- Completed tasks
+- Pending tasks
+
+==================================================
+TASK 3 — Ticketing & Registration
+==================================================
+
+Create organizer ticketing system.
+
+Ticket Types:
+- VIP
+- Standard
+- Student
+- Early Bird
+
+Features:
+
+A. Ticket Creation
+Each ticket type includes:
+- name
+- price
+- quantity
+- perks
+- sales window
+
+B. QR Tickets
+- Generate QR code for every booking
+- Validate on check-in
+
+C. Group Tickets
+- Multi-person booking
+
+D. Coupon Codes
+- Percentage discounts
+- Fixed discounts
+- Expiry dates
+- Usage limits
+
+E. Waitlist Management
+- Auto promote users
+- Notification trigger
+
+F. Refund Management
+- Request review
+- Approve/reject
+- Refund analytics
+
+G. Capacity Control
+- Prevent overselling
+- Real-time seat sync
+- Venue capacity validation
+
+==================================================
+TASK 4 — AI Features
+==================================================
+
+Add:
+
+A. AI Guest Count Prediction
+Based on:
+- historical attendance
+- ticket sales
+- event category
+- day/time
+- venue size
+
+Show:
+- expected attendance
+- confidence score
+
+B. AI Venue Recommendation
+Based on:
+- predicted attendance
+- event type
+- budget
+- past performance
+- location
+
+Show:
+- recommended venues
+- occupancy forecast
+- pricing fit
+- suitability score
+
+==================================================
+UX Requirements
+==================================================
+
+All new screens/components must:
+- Match existing app theme.
+- Be responsive.
+- Have smooth animations.
+- Have loading states.
+- Have empty states.
+- Have validation.
+- Support live updates.
+
+==================================================
+Allowed Actions Only
+==================================================
+
+- Read organizer files
+- Edit organizer files
+- Run one local build/test
+
+Forbidden:
+- Flutter SDK searches
+- PATH fixes
+- Nix exploration
+- Dependency upgrades
+- Workflow edits
+- Screenshot automation
+- Infrastructure debugging
+- Unrelated file scanning
+
+==================================================
+Output Format
+==================================================
+
+When complete, output only:
+
+1. Files changed
+2. Features implemented
+3. Analytics enhancements completed
+4. Any blockers
+5. Stop

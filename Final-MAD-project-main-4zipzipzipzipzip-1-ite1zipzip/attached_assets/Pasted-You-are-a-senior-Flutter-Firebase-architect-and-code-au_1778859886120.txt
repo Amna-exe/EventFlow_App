@@ -1,0 +1,139 @@
+You are a senior Flutter/Firebase architect and code auditor.
+
+Your task is to VERIFY the implementation of new Venue Owner features in the Event Flow project.
+
+Do NOT run the app. Do NOT execute code. Only perform static code + configuration review.
+
+Keep focus on correctness, Firebase integration, data availability (seed data), architecture fit, and UI consistency.
+
+FEATURES TO VERIFY
+
+Confirm these Venue Owner features are implemented:
+
+Pending Bookings Alert Banner
+Shows when pending bookings exist
+Includes “Review” shortcut
+Uses Booking data correctly
+Revenue Forecast Strip
+MTD Confirmed revenue
+MTD Pending revenue
+Uses Payment + Booking data
+Correct calculations
+Upcoming 7-Day Schedule
+Shows next 7 days of bookings
+Correct date filtering
+Compact overview UI
+Organizer Reliability Profile
+Shown in pending booking cards
+Uses organizer booking history
+Lightweight computation only
+FIREBASE INTEGRATION CHECK (IMPORTANT)
+
+Verify each feature is properly connected to Firebase:
+
+1. Data Source Verification
+
+Check whether features use:
+
+Firestore collections (or equivalent Firebase structure)
+Real-time listeners OR proper fetch methods
+Correct queries for bookings, payments, users
+2. Correct Collection Usage
+
+Verify data mapping for:
+
+bookings
+payments
+users (organizers)
+venues/rooms/buildings (if used)
+
+Ensure:
+
+correct field mapping
+correct filtering in queries
+no hardcoded/mock-only logic unless intended
+SEED DATA VERIFICATION
+
+Check whether Firebase contains seed/sample data supporting:
+
+Required Seed Data:
+Pending bookings
+Confirmed bookings
+Cancelled bookings
+Payments (confirmed + pending)
+Multiple organizers with history
+Venue owner data structure populated
+Bookings spread across dates (for 7-day schedule feature)
+Revenue-relevant entries (for MTD calculations)
+WHAT TO CHECK
+1. Feature Implementation
+
+For each feature:
+
+Implemented / Partially Implemented / Missing
+2. Firebase Integration
+
+Verify:
+
+Proper Firestore usage
+Correct queries and filters
+Real-time vs static fetch correctness
+No fake/local-only logic (unless explicitly intended)
+3. Seed Data Coverage
+
+Check:
+
+whether Firebase has enough data to support features
+whether analytics/metrics would produce meaningful output
+whether missing seed data breaks UI features
+4. Data Accuracy
+
+Verify:
+
+booking status filtering
+revenue calculations
+date range logic (MTD, 7-day window)
+organizer history aggregation
+5. Architecture Fit
+Uses existing services (no bypassing Firebase layer)
+No duplicated Firebase calls everywhere
+Clean separation between service and UI
+6. UI Consistency
+matches Event Flow theme
+minimal Material design
+no dashboard clutter
+OUTPUT FORMAT
+A. Feature Implementation Status
+
+For each feature:
+
+Implemented / Partial / Missing
+B. Firebase Integration Review
+correctly connected / partially connected / not connected
+C. Seed Data Status
+sufficient / partially sufficient / insufficient
+
+Include:
+
+what data exists
+what is missing
+impact on features
+D. Data Accuracy Review
+correctness of queries
+correctness of calculations
+correctness of filters
+E. Issues Found
+
+List:
+
+missing Firebase wiring
+broken queries
+insufficient seed data
+incorrect assumptions in logic
+F. Final Verdict
+Fully working with Firebase
+Works but needs seed/data fixes
+Partially working
+Not production ready
+
+Be strict, precise, and implementation-focused.

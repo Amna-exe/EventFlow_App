@@ -1,0 +1,119 @@
+pgrade the existing EventFlow Multi-Role Event & Venue Management System (Flutter Web) from an in-memory architecture to a fully cloud-connected, feature-rich intelligent system using Firebase.
+
+The upgraded system must include:
+
+1. REAL-TIME DATABASE INTEGRATION (MANDATORY)
+
+Replace the entire in-memory data architecture with Firebase Realtime Database as the single source of truth.
+
+The system must:
+
+Store all application data in Firebase Realtime Database
+Maintain real-time synchronization across all dashboards
+Ensure all CRUD operations (Create, Read, Update, Delete) are handled through Firebase
+Support live updates without manual refresh
+Ensure role-based access is still enforced while using Firebase
+Maintain data consistency across multiple user roles (Organizer, Venue Owner, Attendee, Admin)
+
+All modules (users, events, bookings, venues, rooms, payments, notifications, messages, registrations, analytics) must be fully integrated with Firebase and no longer depend on in-memory storage.
+
+2. ANALYTICS SYSTEM (REQUIRED FEATURE)
+
+Integrate Firebase Analytics into the system to track user behavior and system usage.
+
+The system must:
+
+Track all major user actions across all roles
+Monitor screen views for every dashboard and major screen
+Track event lifecycle actions (creation, updates, deletions, bookings, registrations)
+Track venue management actions (room creation, booking approvals, updates)
+Track attendee engagement actions (event views, registrations, calendar usage)
+Store and visualize analytics data where necessary
+Provide role-based analytics visibility in dashboards (Organizer, Admin)
+
+The analytics system must clearly demonstrate user interaction tracking for evaluation and reporting purposes.
+
+3. MINI AI CHATBOT FEATURE (MANDATORY)
+
+Implement a built-in AI assistant inside the application called “EventFlow AI Assistant”.
+
+The chatbot must:
+
+Be accessible from all dashboards (floating or dedicated panel)
+Provide contextual help based on user role and current screen
+Answer queries related to events, venues, bookings, schedules, and registrations
+Guide users through system workflows (event creation, booking process, registration flow)
+Provide smart suggestions based on user intent
+Support a simple natural-language interaction system within the app
+Store conversation history in Firebase Realtime Database for persistence
+Work without external paid APIs (lightweight internal AI logic is acceptable)
+
+The AI feature must enhance usability and act as an intelligent assistant for the platform.
+
+4. ENHANCED ROLE-BASED DASHBOARDS
+
+All four dashboards must be upgraded with advanced, intelligent, and real-time features:
+
+Organizer Dashboard Enhancements
+Real-time event analytics powered by Firebase
+Live registration tracking per event
+AI-based event insights and suggestions
+Enhanced event performance visualization
+Live updates for bookings and attendee activity
+Improved event lifecycle monitoring
+Venue Owner Dashboard Enhancements
+Real-time booking updates from Firebase
+Smart booking management system
+Revenue and booking analytics dashboard
+AI-based suggestions for pricing and availability optimization
+Live notifications for booking requests and approvals
+Improved room and building management interface
+Attendee Dashboard Enhancements
+AI-based personalized event recommendations
+Real-time event updates and notifications
+Enhanced calendar and schedule synchronization
+Smart conflict detection improvements
+Live registration tracking and status updates
+Improved event discovery experience
+Super Admin Dashboard Enhancements
+Full system-wide analytics powered by Firebase
+Real-time monitoring of users, events, bookings, and venues
+AI-assisted system insights and summaries
+Platform activity tracking across all roles
+Centralized control over all database entities
+Enhanced moderation and management capabilities
+5. REAL-TIME SYSTEM BEHAVIOR (CRITICAL REQUIREMENT)
+
+The system must behave as a fully real-time application:
+
+All changes in Firebase must instantly reflect across all dashboards
+No manual refresh should be required
+All dashboards must listen to real-time database streams
+Updates in one role must immediately reflect in all other relevant roles
+System must maintain synchronization consistency across all modules
+6. DATA ARCHITECTURE REQUIREMENTS
+
+All system data must be structured and managed in Firebase Realtime Database with clear separation of:
+
+Users
+Events
+Bookings
+Registrations
+Venues and Rooms
+Payments
+Messages (Chat system)
+Notifications
+Analytics events
+
+Each data type must support real-time updates and role-based access control.
+
+7. SYSTEM IMPROVEMENT GOALS
+
+The upgraded system must achieve:
+
+Full transition from local memory-based system to cloud-based system
+Real-time multi-user synchronization
+AI-assisted user experience
+Analytics-driven insights for all roles
+Improved usability, scalability, and interactivity
+Professional-grade final year project quality suitable for academic evaluation

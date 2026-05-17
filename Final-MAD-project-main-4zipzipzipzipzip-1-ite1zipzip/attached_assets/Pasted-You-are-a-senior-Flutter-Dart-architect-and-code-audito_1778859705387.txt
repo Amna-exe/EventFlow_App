@@ -1,0 +1,88 @@
+You are a senior Flutter/Dart architect and code auditor.
+
+Your task is to VERIFY that the following Venue Owner enhancements have been correctly implemented in the Event Flow project.
+
+Do NOT run the application. Do NOT install dependencies. Only perform static code review.
+
+Keep evaluation strictly focused on correctness, architecture fit, UI consistency, and simplicity.
+
+FEATURES TO VERIFY
+
+Check whether these features are fully implemented:
+
+Pending Bookings Alert Banner
+Shows at top of Venue Owner Overview
+Appears when pending bookings exist
+Includes "Review" shortcut to Bookings tab
+Correctly uses BookingService data
+Revenue Forecast Strip
+Two KPI cards:
+Confirmed MTD revenue
+Pending MTD revenue
+Appears on Overview dashboard
+Uses Payment/Booking data correctly
+No duplicated or incorrect calculations
+Upcoming 7-Day Schedule
+Shows next 7 days of bookings
+Compact timeline style UI
+Appears in Overview (not separate screen)
+Pulls data from BookingService
+Correct date filtering logic
+Organizer Reliability Profile
+Visible inside pending booking cards only
+Shows organizer history (repeat bookings, past success rate at venue/system)
+Uses existing User/Booking data only
+No heavy computation or external dependencies
+WHAT TO CHECK
+1. Functional Correctness
+Features actually exist in code
+Logic matches described behavior
+Data sources are correct
+2. Architecture Fit
+Uses existing singleton services
+No unnecessary new layers
+No duplication of logic
+3. UI Integration
+Consistent with Event Flow theme
+Material design only
+Clean, minimal, non-intrusive UI
+Proper placement in Venue Owner Overview
+4. Data Accuracy
+Revenue calculations are correct
+Date filtering is correct (MTD, 7-day window)
+Booking status filtering is correct
+5. Code Quality
+Simple and readable
+No overengineering
+No redundant abstractions
+Proper separation of UI and logic
+OUTPUT FORMAT
+A. Implementation Status
+
+For each feature:
+
+Implemented / Partially Implemented / Missing
+B. Correct Implementations
+
+List what is correctly done.
+
+C. Issues Found
+
+List:
+
+bugs
+logic errors
+missing UI parts
+incorrect calculations
+architectural problems
+D. UI/UX Consistency Review
+does it match Event Flow design system
+is it clean and minimal
+any clutter or mismatch
+E. Data & Logic Review
+correctness of calculations
+correctness of filtering and aggregation
+F. Final Verdict
+Production ready / Needs minor fixes / Needs major fixes
+
+Focus on accuracy, simplicity, and architectural consistency.

@@ -1,0 +1,4 @@
+Compiling lib/main.dart for the Web...                                 ⠐⠄⢀⢈⢂⢠  1,139ms
+[32m[1m[32m✓[39m[32m[22m Built build/web[39m
+Patched flutter_bootstrap.js to use local CanvasKit.
+Serving Flutter web app on http://0.0.0.0:5000

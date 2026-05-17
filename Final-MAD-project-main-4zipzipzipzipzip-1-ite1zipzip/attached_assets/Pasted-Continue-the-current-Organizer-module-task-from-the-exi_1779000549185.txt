@@ -1,0 +1,84 @@
+Continue the current Organizer module task from the existing progress. Do not restart, redo completed work, or revisit Flutter/Nix/build environment unless a new blocking compile error appears.
+
+Scope: Organizer module only.
+
+Hard constraints:
+- Do NOT modify other modules.
+- Preserve existing app theme, colors, typography, animations, spacing, and architecture.
+- No refactors.
+- No dependency changes.
+- No workflow, PATH, SDK, Nix, Firebase, pubspec, or infrastructure changes unless a reproducible blocking error requires it.
+- If blocked by environment issues: show error first, perform minimum fix only, then immediately return to organizer task.
+
+Execution rules:
+1. Inspect only organizer-related files.
+2. Continue from previous implementation.
+3. Make targeted changes only.
+4. Run one verification build.
+5. Stop after completion.
+
+Continue/fix previous tasks:
+1. Organizer Analytics Dashboard
+- Fix broken metrics, cards, charts, alignment, overflow, state updates, and responsiveness.
+- Ensure live analytics update correctly.
+- Preserve current theme.
+
+2. Event Overlap Notification
+- Ensure overlap warning appears above the event creation form, never behind modals/sheets.
+- Trigger in real time when date/time/venue changes.
+- Use existing design system.
+
+3. Venue Search
+- Fix venue search bar.
+- Live filtering.
+- Clear/reset works.
+- Focus and keyboard behavior correct.
+- Search by venue name, location, and capacity.
+
+Enhance Organizer Dashboard:
+Improve the organizer dashboard UX/UI without redesigning the app.
+
+Add:
+- Quick stats cards:
+  • Total events
+  • Upcoming events
+  • Active venues
+  • Total attendees
+  • Sponsors count
+
+- Recent activity section
+  • Newly created events
+  • Venue bookings
+  • Recent edits
+
+- Upcoming events preview
+  • Banner thumbnail
+  • Date/time
+  • Venue
+  • Status
+
+- Quick actions
+  • Add Event
+  • Manage Venues
+  • View Analytics
+
+- Visual improvements
+  • Better spacing
+  • Cleaner card hierarchy
+  • Responsive layouts
+  • Smooth transitions
+  • Empty states
+
+Do NOT redesign the dashboard from scratch—extend the existing implementation.
+
+Allowed actions only:
+- Read organizer files
+- Edit organizer files
+- One local build/test
+
+Output only:
+1. Files changed
+2. Fixes applied
+3. Dashboard enhancements completed
+4. Any blockers
+5. Stop
